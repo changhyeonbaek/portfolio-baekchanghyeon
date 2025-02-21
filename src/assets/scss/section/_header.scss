@@ -1,0 +1,128 @@
+.header {
+  @include pos-fixed;
+  z-index: 10000;
+
+  &-inner {
+    @include flexbox(between);
+    backdrop-filter: blur(15px);
+    background-color: rgba(116, 99, 99, 0.1);
+    padding: 1rem;
+
+    .header-logo {
+      font-size: 0.9rem;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+
+      em {
+        color: var(--black200);
+        display: block;
+        font-size: 10px;
+      }
+    }
+
+    .header-nav {
+      li {
+        display: inline;
+
+        a {
+          text-transform: uppercase;
+          font-size: 14px;
+          padding: 14px;
+          position: relative;
+
+          &::before {
+            content: '';
+            width: calc(100% - 28px);
+            height: 1px;
+            background-color: var(--black);
+            position: absolute;
+            left: 14px;
+            bottom: 10px;
+            transform: scaleX(0);
+            transition: all 0.3s;
+          }
+
+          &:hover::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      @media (max-width: 800px) {
+        display: none;
+
+        &.show {
+          display: block;
+
+          ul {
+            backdrop-filter: blur(15px);
+            background-color: rgba(116, 99, 99, 0.1);
+            display: block;
+            min-width: 150px;
+            padding: 20px 0;
+            position: absolute;
+            right: 0;
+            top: 68px;
+            z-index: 10000;
+
+            li {
+              display: block;
+              text-align: right;
+
+              a {
+                display: inline-block;
+                padding: 10px;
+              }
+            }
+          }
+        }
+
+        &.show + .header-nav-mobile span::before,
+        &.show + .header-nav-mobile span::after {
+          width: 20px;
+        }
+      }
+    }
+
+    .header-nav-mobile {
+      display: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+
+      @media (max-width: 800px) {
+        display: block;
+      }
+
+      span {
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--black);
+        margin-top: 19px;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 40px;
+          height: 2px;
+          background-color: var(--black);
+          position: absolute;
+          transition: width 0.3s;
+        }
+
+        &::before {
+          right: 0;
+          top: 6px;
+        }
+
+        &::after {
+          left: 0;
+          bottom: 6px;
+        }
+      }
+    }
+  }
+}
