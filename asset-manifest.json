@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio-baekchanghyeon/static/css/main.be3fbb83.css",
+    "main.js": "/portfolio-baekchanghyeon/static/js/main.c55081f4.js",
+    "static/media/IMG_0085.jpg": "/portfolio-baekchanghyeon/static/media/IMG_0085.8016a2c7b160601fa642.jpg",
+    "static/media/profile-img-02.png": "/portfolio-baekchanghyeon/static/media/profile-img-02.601a59ceccf9b326e571.png",
+    "static/media/profile-img-01.png": "/portfolio-baekchanghyeon/static/media/profile-img-01.8d40ca2b9218c6f6c3de.png",
+    "static/media/slick.svg": "/portfolio-baekchanghyeon/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/portfolio-baekchanghyeon/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/portfolio-baekchanghyeon/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/portfolio-baekchanghyeon/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/portfolio-baekchanghyeon/index.html",
+    "main.be3fbb83.css.map": "/portfolio-baekchanghyeon/static/css/main.be3fbb83.css.map",
+    "main.c55081f4.js.map": "/portfolio-baekchanghyeon/static/js/main.c55081f4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be3fbb83.css",
+    "static/js/main.c55081f4.js"
+  ]
+}
