@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'MangoDdobak-B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.profile {
+  color: var(--black100);
+  min-height: 100vh;
+  transition: background-color 400ms ease-in-out;
+
+  &.is-transitioned {
+    background-color: var(--black);
+
+    .profile-scroll {
+      display: none;
+    }
+  }
+
+  &-header {
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 3rem 1.25rem;
+    position: relative;
+  }
+
+  &-greeting {
+    font-family: var(--mainKor-font);
+    font-size: 2.4rem;
+    margin: 0 0 1rem;
+  }
+
+  &-info {
+    @include flexbox(start);
+    margin: 0 0 3rem;
+
+    &-name {
+      font-family: var(--mainNum-font);
+      font-size: 4rem;
+      font-weight: 700;
+      margin: 0 0.4rem 0 0;
+    }
+
+    &-suffix {
+      font-family: var(--mainKor-font);
+      font-size: 2.4rem;
+      margin: 0 0 -0.5rem;
+    }
+  }
+
+  .line {
+    background-color: var(--black100);
+    display: block;
+    height: 0.3125rem;
+    margin: 0 0 3rem;
+    width: 5rem;
+  }
+
+  &-roulette {
+    @include flexbox;
+    height: 3rem;
+    list-style: none;
+    margin: 2rem;
+    position: relative;
+    width: auto;
+  }
+
+  &-word {
+    font-family: var(--mainEng-font);
+    font-size: 3rem;
+    font-weight: 700;
+    height: 100%;
+    line-height: 3rem;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+  .fixed-word {
+    @include flexbox;
+    height: 3rem;
+  }
+
+  .word {
+    animation: clip-text 0.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    position: relative;
+    white-space: nowrap;
+
+    &::before {
+      animation: clip-cover 0.5s ease-in-out forwards;
+      animation-delay: 0.5s;
+      background-color: var(--black);
+      content: '';
+      display: block;
+      inset: 0;
+      position: absolute;
+    }
+  }
+
+  &-scroll {
+    @include column-flexbox(start, center);
+    left: 50%;
+    position: absolute;
+    top: 36rem;
+    transform: translateX(-50%);
+  }
+
+  &-desc {
+    @include column-flexbox(start, start);
+    color: var(--white);
+    height: 100vh;
+    overflow: hidden;
+    padding: 3rem 1.25rem;
+    position: relative;
+
+    .profile-details {
+      @include flexbox(between);
+      gap: 2rem;
+      margin: 0 0 3rem;
+      z-index: 1;
+
+      .profile-image {
+        border-radius: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        overflow: hidden;
+        transition: transform 600ms ease-in-out;
+        width: 100%;
+      }
+
+      .personal-info {
+        flex: 1;
+
+        p {
+          font-family: var(--mainKor-font);
+          font-size: 1.1rem;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 700;
+      margin: 0 0 1.5rem;
+    }
+
+    .small-image {
+      left: -70%;
+      width: 180%;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      &.control {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+      }
+    }
+
+    .content {
+      margin: 2rem auto;
+      z-index: 2;
+
+      h3 {
+        font-family: var(--mainKor-font);
+        font-size: 1rem;
+        line-height: 2;
+      }
+    }
+  }
+
+  .button-container {
+    @include flexbox(between);
+    margin: 2rem 0;
+    width: 100%;
+
+    .button-wrapper {
+      border: 1px solid var(--white);
+      text-align: center;
+      width: 50%;
+
+      &:last-child {
+        border-left: 0;
+      }
+    }
+
+    .button-link {
+      @include flexbox;
+      background-color: var(--black100);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+      color: var(--white);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      height: 60px;
+      opacity: 0.8;
+      padding: 0 1rem;
+      text-decoration: none;
+      transition: opacity 300ms ease, font-size 300ms ease;
+
+      &:hover {
+        font-size: 1.4rem;
+        opacity: 1;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-scroll {
+      top: 64rem;
+    }
+
+    &-desc {
+      .profile-details {
+        .profile-image {
+          max-width: 30rem;
+          width: 50%;
+        }
+
+        .personal-info {
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .content {
+      margin: 4rem auto;
+
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-scroll {
+      top: 38rem;
+    }
+
+    &-desc {
+      padding: 1rem 1.25rem;
+
+      .profile-details {
+        height: auto;
+        width: 100%;
+
+        .profile-image {
+          height: auto;
+          margin: 0 auto;
+          max-width: 20rem;
+          width: 50%;
+        }
+
+        .personal-info {
+          display: flex;
+          flex: none;
+          flex-direction: column;
+          justify-content: center;
+          width: 50%;
+
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .content {
+      margin: 1rem 0;
+
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .line {
+      &.is-bottom {
+        display: none;
+      }
+    }
+
+    .button-container {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@keyframes clip-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes clip-cover {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 100%);
+  }
+}

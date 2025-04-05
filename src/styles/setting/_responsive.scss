@@ -1,0 +1,19 @@
+@mixin responsive($screen) {
+  @if ($screen == 'T') {
+    @media screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if ($screen == 'D') {
+    @media screen and (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile-only() {
+  @media screen and (max-width: (48rem - 0.0625rem)) {
+    @content;
+  }
+}

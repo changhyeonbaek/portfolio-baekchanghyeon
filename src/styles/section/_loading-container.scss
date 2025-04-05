@@ -1,0 +1,26 @@
+.loading-container {
+  @include flexbox;
+  background-color: var(--black);
+  color: var(--white);
+  flex-direction: column;
+  height: 100vh; // 전체 화면 높이
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #007bff; // 강조 색상
+  height: 40px;
+  width: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

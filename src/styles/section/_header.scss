@@ -1,0 +1,32 @@
+.header {
+  height: 3.125rem;
+  width: 100%;
+
+  &-inner {
+    position: relative;
+
+    .header-logo {
+      @include flexbox(between);
+      border-bottom: 0.0625rem solid var(--black100);
+      height: 3.125rem;
+      padding: 0 0.625rem;
+      text-transform: uppercase;
+
+      p {
+        color: var(--black100);
+        font-size: 0.75rem;
+        white-space: nowrap;
+        width: auto;
+
+        &:first-child {
+          font-size: 0.8125rem;
+          font-weight: 700;
+        }
+
+        &:last-child {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
