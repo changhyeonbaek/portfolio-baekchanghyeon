@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "내일의집",
+    "images": [
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-1.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-2.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-3.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-4.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-5.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-6.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-7.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-8.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-9.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-10.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-11.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-12.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/tomorrow-house-13.png?raw=true"
+    ],
+    "details": {
+      "type": "Vanilla JS",
+      "tech": "HTML, SCSS, Vanilla JS",
+      "description": "인테리어 플랫폼 '오늘의집'의 제품 상세 페이지를 클론한 프로젝트입니다. SCSS로 반응형 그리드와 스타일을 설계하고, Vanilla JS로 IntersectionObserver를 활용한 동적 UI를 구현합니다."
+    },
+    "links": {
+      "github": "https://github.com/changhyeonbaek/tomorrow-house",
+      "deploy": "https://changhyeonbaek.github.io/tomorrow-house/"
+    }
+  },
+  {
+    "id": 2,
+    "title": "투두리스트 앱",
+    "images": [
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/to-do-list-01.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/to-do-list-02.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/to-do-list-03.png?raw=true"
+    ],
+    "details": {
+      "type": "React",
+      "tech": "React, Redux, Styled-Components",
+      "description": "Redux로 상태를 관리하며 Styled-Components를 활용해 동적인 스타일링을 구현한 투두리스트 웹 앱입니다. 할 일 추가, 완료, 삭제를 지원하는 투두리스트 앱으로, Redux를 통해 전역 상태를 관리하고 Styled-Components로 반응형 디자인과 부드러운 애니메이션을 구현했습니다."
+    },
+    "links": {
+      "github": "https://github.com/changhyeonbaek/todo-list",
+      "deploy": "/projects/todo-app"
+    }
+  },
+  {
+    "id": 3,
+    "title": "내일의집",
+    "images": [
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-1.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-2.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-3.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-4.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-5.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-6.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-7.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-8.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-9.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-10.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-11.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-12.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-13.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-14.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-15.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-16.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-17.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-18.png?raw=true",
+      "https://github.com/changhyeonbaek/portfolio-images/blob/main/react-tomorrow-house-19.png?raw=true"
+    ],
+    "details": {
+      "type": "React",
+      "tech": "React, React Router, Firebase, Zustand, Styled-components, SCSS, Axios",
+      "description": "인테리어 플랫폼 '오늘의집'을 클론한 프로젝트입니다. React와 SCSS를 활용해 반응형 UI를 설계하고, Zustand로 사용자 인증 상태를 관리합니다. 또한, Firebase Authentication을 통해 이메일/비밀번호 로그인 기능을 구현했으며, 로그인 여부에 따라 접근 가능한 페이지를 분기 처리했습니다. 제품 데이터와 사용자 정보는 Firebase Firestore로 동적으로 관리합니다. Axios를 사용해 외부 JSON 파일에서 프로젝트 데이터를 비동기적으로 가져와 동적인 포트폴리오 UI를 구성했습니다."
+    },
+    "links": {
+      "github": "https://github.com/changhyeonbaek/react-tomorrow-house",
+      "deploy": "https://changhyeonbaek.github.io/react-tomorrow-house/"
+    }
+  }
+]
