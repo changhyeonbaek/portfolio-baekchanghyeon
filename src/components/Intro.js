@@ -1,41 +1,63 @@
 import React from 'react'
 
-import about from '../assets/img/img-user-05.jpg'
-import introContent from '../assets/data/intro-content.json'
+import ProfileImg01 from '../assets/img/profile-img-01.png'
+import ProfileImg02 from '../assets/img/profile-img-02.png'
+import { NavLink } from 'react-router-dom'
 
 const Intro = () => {
   return (
     <section className="intro">
-      <div className="intro-inner">
-        <h1 className="intro-title">{introContent.title}</h1>
-        <div class="intro-lines" aria-hidden="true">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
+      <div className="intro-section">
+        <NavLink to="/projects" className="intro-section-projects">
+          <img className="main-img" src={ProfileImg01} alt="" />
+          <svg
+            className="circle-text-svg"
+            width="300"
+            height="300"
+            viewBox="0 0 300 300"
+          >
+            <path
+              id="circlePathProjects"
+              d="M 150, 150 m -120, 0 a 120,120 0 1,0 240,0 a 120,120 0 1,0 -240,0"
+              fill="none"
+            />
+            <text>
+              <textPath
+                href="#circlePathProjects"
+                startOffset="50%"
+                textAnchor="middle"
+              >
+                PROJECTS • PROJECTS • PROJECTS •
+              </textPath>
+            </text>
+          </svg>
+        </NavLink>
       </div>
-      <div class="intro-text">
-        <div class="text">
-          <div>{introContent.desc[0]}</div>
-          <div>{introContent.desc[1]}</div>
-          <div>{introContent.desc[2]}</div>
-        </div>
-        <div class="img">
-          <img src={about} alt="어바웃" />
-        </div>
-      </div>
-      <div class="intro-lines bottom" aria-hidden="true">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+      <div className="intro-section">
+        <NavLink to="/about" className="intro-section-about">
+            <img className="main-img" src={ProfileImg02} alt="" />
+            <svg
+              className="circle-text-svg"
+              width="300"
+              height="300"
+              viewBox="0 0 300 300"
+            >
+              <path
+                id="circlePathProjects"
+                d="M 150, 150 m -120, 0 a 120,120 0 1,0 240,0 a 120,120 0 1,0 -240,0"
+                fill="none"
+              />
+              <text>
+                <textPath
+                  href="#circlePathProjects"
+                  startOffset="50%"
+                  textAnchor="middle"
+                >
+                  ABOUT ME • ABOUT ME • ABOUT ME •
+                </textPath>
+              </text>
+            </svg>
+        </NavLink>
       </div>
     </section>
   )
