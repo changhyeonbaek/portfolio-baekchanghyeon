@@ -9,6 +9,6 @@
 - **제목**: 개인 포트폴리오
 - **타입**: React
 - **배포 URL**: [https://github.com/changhyeonbaek/portfolio-baekchanghyeon](https://github.com/changhyeonbaek/portfolio-baekchanghyeon)
-- **GitHub**: [https://github.com/changhyeonbaek/portfolio-baekchanghyeon](https://github.com/changhyeonbaek/portfolio-baekchanghyeon)
+- **GitHub**: [https://changhyeonbaek.github.io/portfolio-baekchanghyeon/](https://changhyeonbaek.github.io/portfolio-baekchanghyeon/)
 
 이 프로젝트는 React Router로 페이지 간 라우팅을 구현하고, SCSS로 반응형 디자인과 애니메이션을 설계했습니다. Axios를 활용해 외부 JSON 데이터를 비동기적으로 가져오며, React-Slick으로 프로젝트 이미지를 슬라이더 형태로 표시합니다.
