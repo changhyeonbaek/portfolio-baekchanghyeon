@@ -1,0 +1,464 @@
+.outer-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  @include column-flexbox;
+  height: 100vh;
+}
+
+.left-section {
+  background-color: var(--black);
+  flex: 0 0 auto;
+  overflow-y: auto;
+  padding: 0.5rem 0 0;
+  width: 100%;
+}
+
+.fixed-title {
+  color: var(--white);
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.buttons-container {
+  @include flexbox;
+  gap: 0.5rem;
+  padding: 0.5rem 0 0;
+}
+
+.project-button {
+  background: none;
+  border: 0;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.3125rem 0.2rem;
+  text-align: center;
+  transition: background-color 300ms ease, color 300ms ease,
+    font-size 300ms ease, font-weight 300ms ease;
+  white-space: nowrap;
+  width: 6rem;
+
+  &.is-active {
+    background-color: #f0f8ff;
+    border-radius: 2rem;
+    color: #007bff;
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: #0056b3;
+  }
+}
+
+.right-section {
+  background-color: var(--black);
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.project-content {
+  height: 100%;
+  width: 100%;
+}
+
+.project-card {
+  @include column-flexbox;
+  color: var(--white);
+  height: 100%;
+  text-align: left;
+}
+
+.image-slider {
+  flex: 0 0 auto;
+  height: 15rem;
+  width: 100%;
+
+  .slick-list,
+  .slick-track,
+  .slick-slide > div {
+    height: 100%;
+  }
+
+  div {
+    height: 100%;
+  }
+
+  img {
+    border-radius: 0.25rem;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .slick-dots {
+    bottom: -1.5rem;
+
+    li button:before {
+      color: var(--white);
+    }
+
+    li.slick-active button:before {
+      color: #007bff;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 1;
+
+    &::before {
+      color: var(--white);
+      font-size: 1rem;
+    }
+  }
+
+  .slick-prev {
+    left: 0.25rem;
+  }
+
+  .slick-next {
+    right: 0.25rem;
+  }
+}
+
+.project-details {
+  @include column-flexbox(start, start);
+  flex: 1 1 auto;
+  overflow-y: auto;
+
+  &-title {
+    font-size: 1.75rem;
+    margin: 0.5rem 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0.25rem 0;
+
+    strong {
+      font-weight: 700;
+    }
+
+    .tech-title {
+      display: inline-block;
+      width: 14%;
+    }
+  }
+
+  .tech {
+    @include flexbox(start, center);
+    gap: 0.325rem;
+    height: 3.75rem;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%;
+
+    strong {
+      align-items: center;
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+
+    .tech-tags-container {
+      display: inline-block;
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+
+    .tech-tag {
+      background-color: var(--white);
+      border-radius: 1rem;
+      color: #007bff;
+      display: inline-block;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      margin: 0.125rem;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  .desc {
+    font-size: 0.8rem;
+    height: 5.75rem;
+    margin: 0.4rem 0;
+    overflow-y: auto;
+  }
+
+  .button-group {
+    @include flexbox(between);
+    margin: 0.7rem 0 0;
+    width: 100%;
+  }
+
+  .button {
+    background-color: var(--mainBg-color);
+    border: 1px solid var(--white);
+    border-radius: 0.125rem;
+    color: var(--white);
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 49%;
+
+    .button-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    &:first-child {
+      background-color: var(--white);
+      border-color: var(--black300);
+      color: var(--black300);
+
+      &:before {
+        background-color: #828c94;
+      }
+    }
+
+    &::before {
+      background-color: #0aa5ff;
+      color: var(--white);
+      content: '';
+      display: block;
+      inset: 0;
+      position: absolute;
+      scale: 0 1;
+      transform-origin: right;
+      transition: scale 0.4s ease;
+    }
+
+    &:hover::before {
+      scale: 1;
+      transform-origin: left;
+    }
+
+    &:first-child:hover {
+      color: var(--white);
+    }
+  }
+}
+
+@include responsive(T) {
+  .content-wrapper {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .left-section {
+    padding: 1rem;
+  }
+
+  .fixed-title {
+    font-size: 3rem;
+  }
+
+  .project-button {
+    font-size: 1.125rem;
+    width: 8rem;
+
+    &.is-active {
+      border-radius: 2rem;
+    }
+  }
+
+  .right-section {
+    padding: 1rem;
+  }
+
+  .image-slider {
+    height: 30rem;
+
+    div {
+      border-radius: 0.25rem;
+      height: 100%;
+    }
+
+    .slick-list,
+    .slick-track,
+    .slick-slide > div {
+      height: 100%;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .project-details {
+    &-title {
+      font-size: 2.5rem;
+      margin: 0.75rem 0;
+    }
+
+    p {
+      font-size: 1.75rem;
+
+      .tech-tag {
+        border-radius: 2rem;
+        margin: 0.25rem;
+      }
+    }
+
+    .desc {
+      font-size: 1.5rem;
+      height: 10rem;
+    }
+
+    .button {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include responsive(D) {
+  .content-wrapper {
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .left-section {
+    border: 1px dotted var(--black300);
+    height: 100%;
+    padding: 1.25rem;
+    width: 20%;
+  }
+
+  .fixed-title {
+    font-size: 4rem;
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .project-button {
+    border-radius: 0.25rem;
+    font-size: 1.75rem;
+    text-align: center;
+    transition: transform 0.4s ease;
+    width: 80%;
+
+    &:hover {
+      background-color: var(--mainBg-color);
+      border-radius: 0.25rem;
+      color: var(--black100);
+    }
+
+    &.is-active {
+      background-color: var(--mainBg-color);
+      border-radius: 0.25rem;
+      color: var(--black100);
+      font-weight: 700;
+      transform: scale(1.05);
+    }
+  }
+
+  .right-section {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1.25rem;
+    width: 80%;
+  }
+
+  .project-card {
+    @include flexbox(start, center);
+    flex-direction: row;
+    gap: 1.5rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .image-slider {
+    flex: 0 0 55%;
+    overflow: hidden;
+    width: auto;
+
+    .slick-list,
+    .slick-track,
+    .slick-slide > div {
+      height: 100%;
+    }
+
+    div {
+      height: 24rem;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .project-details {
+    @include column-flexbox(center, start);
+    flex: 0 0 45%;
+    padding: 0 1rem;
+
+    &-title {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+
+      &.tech {
+        gap: 0.5rem;
+        height: 5.25rem;
+        min-height: 3rem;
+
+        strong {
+          width: 4rem;
+        }
+
+        .tech-tags-container {
+          flex-grow: 1;
+          overflow-x: auto;
+        }
+
+        .tech-tag {
+          font-size: 1rem;
+          margin: 0.25rem;
+          padding: 0.3rem 0.6rem;
+        }
+      }
+    }
+
+    .desc {
+      font-size: 1.25rem;
+      height: 20rem;
+      max-height: 20rem;
+    }
+
+    .button-group {
+      margin-top: auto;
+      padding-top: 1rem;
+    }
+
+    .button {
+      font-size: 1.25rem;
+    }
+  }
+}
